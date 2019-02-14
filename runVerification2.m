@@ -3,11 +3,11 @@ function runVerification2(buildNumber)
 %% Add paths
 addpath(fileparts(mfilename('fullpath')));
 
-%% Create verification folder
-newDir = ['VerifyNr' num2str(buildNumber)];
-fprintf(2,'*** Create directory %s ***\n', newDir);
-mkdir(newDir);
-cd(newDir);
+% %% Create verification folder
+% newDir = ['VerifyNr' num2str(buildNumber)];
+% fprintf(2,'*** Create directory %s ***\n', newDir);
+% mkdir(newDir);
+% cd(newDir);
 
 %% Setup PIL
 fprintf(2,'*** Set up TMS570 hardware ***\n');
