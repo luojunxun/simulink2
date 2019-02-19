@@ -108,24 +108,24 @@ fprintf(2,'*** Generate Code ***\n');
 rtwbuild(myModel);
 
 %% Analyze code
-fprintf(2,'*** Start Polyspace Code Prover ***\n');
-[status, ~] = license('checkout','polyspace_server_c_cpp');
-if status
-    opts = polyspace.ModelLinkOptions(myModel);
-    opts.CodingRulesCodeMetrics.EnableMisraC3 = true;
-    opts.CodingRulesCodeMetrics.MisraC3Subset = 'mandatory';
-    opts.MergedReporting.EnableReportGeneration = true;
-    opts.MergedReporting.ReportOutputFormat = 'html';
-    opts.ResultsDir = 'ResultFolderPS';
-    proj = polyspace.Project;
-    proj.Configuration = opts;
-    codeProverResult = proj.run('codeProver');
-    %fprintf(2,'*** Result from Code Prover ***\n');
-    %fprintf(2, proj.Results.getSummary);
-    %fprintf(2,'\n');
-else
-    fprintf(2,'No license available for Code Prover\n');
-end
+% fprintf(2,'*** Start Polyspace Code Prover ***\n');
+% [status, ~] = license('checkout','polyspace_server_c_cpp');
+% if status
+%     opts = polyspace.ModelLinkOptions(myModel);
+%     opts.CodingRulesCodeMetrics.EnableMisraC3 = true;
+%     opts.CodingRulesCodeMetrics.MisraC3Subset = 'mandatory';
+%     opts.MergedReporting.EnableReportGeneration = true;
+%     opts.MergedReporting.ReportOutputFormat = 'html';
+%     opts.ResultsDir = 'ResultFolderPS';
+%     proj = polyspace.Project;
+%     proj.Configuration = opts;
+%     codeProverResult = proj.run('codeProver');
+%     %fprintf(2,'*** Result from Code Prover ***\n');
+%     %fprintf(2, proj.Results.getSummary);
+%     %fprintf(2,'\n');
+% else
+%     fprintf(2,'No license available for Code Prover\n');
+% end
 
 
 %% Clean up
