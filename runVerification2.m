@@ -23,16 +23,16 @@ load_system(myModel);
 % set_param(gcs,'SimulationCommand','Update');
 set_param(bdroot,'SimulationCommand','Update');
 
-%% Execute model checks
-fprintf(2,'*** Execute model checks ***\n');
-% Create list of checks and models to run.
-%CheckIDList ={'mathworks.maab.jc_0021', 'mathworks.iec61508.RootLevelInports'};
-SysList={myModel};
-% Run the Model Advisor.
-checkResult = ModelAdvisor.run(SysList,'Configuration','ModelAdvisorChecksFilter.mat');
-fprintf(2,'Result: Number of checks failed: %i\n', checkResult{1}.numFail);
-fprintf(2,'        Number of checks with warnings: %i\n', checkResult{1}.numWarn);
-fprintf(2,'        Number of checks passed: %i\n', checkResult{1}.numPass);
+% %% Execute model checks
+% fprintf(2,'*** Execute model checks ***\n');
+% % Create list of checks and models to run.
+% %CheckIDList ={'mathworks.maab.jc_0021', 'mathworks.iec61508.RootLevelInports'};
+% SysList={myModel};
+% % Run the Model Advisor.
+% checkResult = ModelAdvisor.run(SysList,'Configuration','ModelAdvisorChecksFilter.mat');
+% fprintf(2,'Result: Number of checks failed: %i\n', checkResult{1}.numFail);
+% fprintf(2,'        Number of checks with warnings: %i\n', checkResult{1}.numWarn);
+% fprintf(2,'        Number of checks passed: %i\n', checkResult{1}.numPass);
 
 %% Run tests
 fprintf(2,'*** Execute test cases ***\n');
