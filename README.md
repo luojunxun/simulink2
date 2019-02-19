@@ -1,4 +1,2 @@
 # simulink2
-# abceddaaa
-a
-a
+# abceddaa
