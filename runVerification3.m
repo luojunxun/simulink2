@@ -5,4 +5,3 @@ fprintf(2,'*** Set up TMS570 hardware ***\n');
 
 fprintf(1,'aaa\n');
 
-disp('aa');
