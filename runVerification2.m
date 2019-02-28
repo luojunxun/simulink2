@@ -26,9 +26,6 @@ set_param(bdroot,'SimulationCommand','Update');
 
 %% Run tests
 fprintf(2,'*** Execute test cases ***\n');
-% Executing tests from SL Test
-% tf = sltest.testmanager.load('TestManager');
-% result = tf.run
 % Executing tests using ml unit test
 myTestSuite = testsuite('TestManager.mldatx');
 import('matlab.unittest.TestRunner');
@@ -86,7 +83,6 @@ testResult = run(myTestRunner,myTestSuite);
 % Extract result
 rsList = sltest.testmanager.getResultSets;
 sltest.testmanager.report(rsList(end),'./SLTestReport.pdf','IncludeTestResults',0);
-
 
 % Display result
 fprintf(2,'*** Result from test ***\n');
