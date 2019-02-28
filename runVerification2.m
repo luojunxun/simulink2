@@ -1,4 +1,4 @@
-function runVerification2(buildNumber)
+function runVerification2()
 
 %% Add paths
 addpath(fileparts(mfilename('fullpath')));
