@@ -11,7 +11,6 @@ initModel;
 fprintf(2,'*** Loading Model ***\n');
 myModel = 'MyTestModel';
 load_system(myModel);
-% set_param(gcs,'SimulationCommand','Update');
 set_param(bdroot,'SimulationCommand','Update');
 
 %% Execute model checks
